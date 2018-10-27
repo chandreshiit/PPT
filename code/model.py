@@ -37,22 +37,6 @@ with open(directory+vocab_dict,'r') as fid:
 """
 step 3. Using tf-idf model for encoding documents
 """
-## define data matrix X and label array y
-#X = np.zeros((len(data),len(vocabulary)))
-#pos_label = [1]*1000
-#neg_label = [0]*1000
-#
-#y = np.array(pos_label+neg_label)
-#
-#for row,doc in enumerate(data):        
-#    BoW    = Counter(tokens)
-#    for  w, c in BoW.items():
-#        #get the index from dict
-#      X[row,  vocabulary[w]] = c
-#
-## clear data to free up space
-#del vocabulary
-#del data
 
 # define data matrix X and label array y
 pos_label = [1]*1000
@@ -68,19 +52,16 @@ del data
 """
 step 4. Construct the model, remember logistic regression is a linear model
 """        
-# step 1. initialize the model
-n,d = X.shape
-w = np.zeros((d,))
     
-# step 2. shuffle the data
-
+# step 1. shuffle the data
+n,d = X.shape
 index = list(range(0,n))
 random.shuffle(index)
 
 X = X[index, :]
 y = y[index]
 
-# split into train/test in 2/3-1/3
+# step 2. split into train/test in 2/3-1/3
 Xtrain = X[:1500,:]
 ytrain = y[:1500]
 
@@ -98,58 +79,78 @@ Using scikit in-built logistic regression
 #logreg = LogisticRegression()
 #
 #logreg.fit(Xtrain, ytrain)
-#logreg.score(Xtrain, ytrain)
-#logreg.score(Xtest, ytest)
+##logreg.score(Xtrain, ytrain)
+##logreg.score(Xtest, ytest)
 #y_hat = logreg.predict(Xtest)
+##print accuracy
 #from sklearn.metrics import accuracy_score
 #print("test accuracy:",accuracy_score(ytest,y_hat))
+#
+##print confusion matrix
+#from sklearn.metrics import confusion_matrix
+#from util import plot_confusion_matrix
+#import matplotlib.pyplot as plt
+## Compute confusion matrix
+#cnf_matrix = confusion_matrix(ytest, y_hat)
+#np.set_printoptions(precision=2)
+## Plot non-normalized confusion matrix
+#plt.figure()
+#plot_confusion_matrix(cnf_matrix, classes=np.unique(y_hat),
+#                      title='Confusion matrix, without normalization')
+
 
 """
 custome logistic regression
 """
-# some usuful functions
-def sigmoid(x):
-    # numerically stable sigmoid
-    if x>= 0:
-        z = np.exp(x)
-        return 1 / (1 + z)    
-    else:
-        z =  np.exp(x)
-        return z / (1 + z)
+class LogisticRegression:
+    def __init__(self, lr=0.01, num_iter=10000, fit_intercept=True, verbose=True):
+        self.lr = lr
+        self.num_iter = num_iter
+        self.fit_intercept = fit_intercept
+        self.verbose = verbose
     
-def loss(w,X,y):
-    z = np.dot(X,w)
-    z = np.array([ sigmoid(t) for t in z])
-    # loss = -\sum_i^n(y^ilog(z) +(1-y)log(1-z))
-    first_term = np.multiply(y,np.log(z))
-    second_term = np.multiply(1-y,np.log(1-z))
+    def __add_intercept(self, X):
+        intercept = np.ones((X.shape[0], 1))
+        return np.concatenate((intercept, X), axis=1)
     
-    loss = -np.sum(first_term+second_term)/len(y)
+    def __sigmoid(self, z):
+        return 1 / (1 + np.exp(-z))
+    def __loss(self, h, y):
+        return (-y * np.log(h) - (1 - y) * np.log(1 - h)).mean()
     
-    return loss
- 
-    
-def gradient(x,X,y):
-     z = np.dot(X,w)
-     z = np.array([ sigmoid(t) for t in z])
-     grad = np.multiply(z.reshape((len(z),)), X.T)
-     grad = np.sum(grad,axis=1)
-     return grad
-    
-# iterate  over data
-# Batch Gradient descent
-maxiter         = 100
-learning_rate   = 0.1
-print_step      = int(maxiter/10)
-
-for it in range(maxiter):
-    #calculate gradient of the objective
-    grad = gradient(w,Xtrain,ytrain)
-    # update
-    w = w -learning_rate*grad.T
-    
-    # bookkeeping
-    #print loss time to time
-    if it%print_step == 0:
-        print("loss: ",loss(w,Xtrain,ytrain))
+    def fit(self, X, y):
+        if self.fit_intercept:
+            X = self.__add_intercept(X)
         
+        # weights initialization
+        self.w = np.zeros(X.shape[1])
+        
+        for i in range(self.num_iter):
+            z = np.dot(X, self.w)
+            h = self.__sigmoid(z)
+            gradient = np.dot(X.T, (h - y)) / y.size
+            self.w -= self.lr * gradient
+            
+            if(self.verbose == True and i % 1000 == 0):
+                z = np.dot(X, self.w)
+                h = self.__sigmoid(z)
+                print('loss: ',self.__loss(h, y))
+    def predict_prob(self, X):
+        if self.fit_intercept:
+            X = self.__add_intercept(X)
+    
+        return self.__sigmoid(np.dot(X, self.w))
+    
+    def predict(self, X, threshold=0.5):
+        return self.predict_prob(X) >= threshold
+
+#Evaluation
+model = LogisticRegression(lr=0.1, num_iter=10000)
+Xtrain =Xtrain.toarray()
+Xtest = Xtest.toarray()
+model.fit(Xtrain, ytrain)
+preds = model.predict(Xtest)
+# accuracy
+print('accuracy',(preds == ytest).mean())
+
+    
