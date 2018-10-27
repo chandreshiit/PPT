@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.19)  14 OCT 2018 13:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.19)  27 OCT 2018 14:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1054,13 +1054,31 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
  (./ppt.nav)
+<fig/ML.png, id=13, 1370.11874pt x 780.9175pt>
+File: fig/ML.png Graphic file (type png)
+ <use fig/ML.png>
+Package pdftex.def Info: fig/ML.png used on input line 58.
+(pdftex.def)             Requested size: 289.07143pt x 216.80846pt.
+
+Overfull \vbox (16.33533pt too high) detected at line 58
+ []
+
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 77.
+(Font)              size <5> substituted on input line 58.
 
 [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2 <./fig/ML.png>] <fig/typespdf-crop.pdf, id=70, 560.0925pt x 393.47pt>
+File: fig/typespdf-crop.pdf Graphic file (type pdf)
+
+<use fig/typespdf-crop.pdf>
+Package pdftex.def Info: fig/typespdf-crop.pdf used on input line 67.
+(pdftex.def)             Requested size: 289.08755pt x 216.8054pt.
+ [3
+
+ <./fig/typespdf-crop.pdf>]
 \tf@nav=\write6
 \openout6 = `ppt.nav'.
 
@@ -1070,12 +1088,11 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 \tf@snm=\write8
 \openout8 = `ppt.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 77.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 77.
-
-(./ppt.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 77.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 77.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 88.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 88.
+ (./ppt.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 88.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 88.
 Package rerunfilecheck Info: File `ppt.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1085,24 +1102,21 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 22417 strings out of 492995
- 434372 string characters out of 6132689
- 508377 words of memory out of 5000000
- 25455 multiletter control sequences out of 15000+600000
- 5758 words of font info for 21 fonts, out of 8000000 for 9000
+ 22486 strings out of 492995
+ 435622 string characters out of 6132689
+ 510377 words of memory out of 5000000
+ 25515 multiletter control sequences out of 15000+600000
+ 6063 words of font info for 22 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,14n,102p,789b,547s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Navigation2} has been referenced but does not exi
-st, replaced by a fixed one
-
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb>
-Output written on ppt.pdf (1 page, 41871 bytes).
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb>
+Output written on ppt.pdf (3 pages, 186660 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
- 4 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 134 PDF objects out of 1000 (max. 8388607)
+ 106 compressed objects within 2 object streams
+ 7 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
