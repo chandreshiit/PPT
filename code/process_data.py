@@ -12,9 +12,10 @@ from collections import Counter
 directory = '/home/chandresh/ckm/data/movies review/review_polarity/txt_sentoken/'
 vocab_dict ='movie_dict.txt'
 outfile    = 'processed_review.txt'
-data=[]
+
 url ="http://www.cs.cornell.edu/people/pabo/movie-review-data/review_polarity.tar.gz"
 
+data=[]
 def process_docs(directory):
     for filename in os.listdir(directory):
 		# skip files that do not have the right extension
