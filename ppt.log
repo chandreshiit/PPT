@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.19)  27 OCT 2018 14:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.19)  31 OCT 2018 09:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -917,12 +917,7 @@ File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 \CRB@ydiffl=\dimen281
 \CRB@xdiffl=\dimen282
 Package: copyrightbox 2011/11/27  v 0.1
-)
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 35.
-
-(./ppt.aux)
+) (./ppt.aux)
 \openout1 = `ppt.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
@@ -1070,7 +1065,7 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2 <./fig/ML.png>] <fig/typespdf-crop.pdf, id=70, 560.0925pt x 393.47pt>
+[2 <./fig/ML.png>] <fig/typespdf-crop.pdf, id=69, 560.0925pt x 393.47pt>
 File: fig/typespdf-crop.pdf Graphic file (type pdf)
 
 <use fig/typespdf-crop.pdf>
@@ -1102,10 +1097,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 22486 strings out of 492995
- 435622 string characters out of 6132689
- 510377 words of memory out of 5000000
- 25515 multiletter control sequences out of 15000+600000
+ 22481 strings out of 492995
+ 435589 string characters out of 6132689
+ 510321 words of memory out of 5000000
+ 25510 multiletter control sequences out of 15000+600000
  6063 words of font info for 22 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,14n,102p,789b,547s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1113,7 +1108,7 @@ Here is how much of TeX's memory you used:
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></
 usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb>
-Output written on ppt.pdf (3 pages, 186660 bytes).
+Output written on ppt.pdf (3 pages, 186390 bytes).
 PDF statistics:
  134 PDF objects out of 1000 (max. 8388607)
  106 compressed objects within 2 object streams
