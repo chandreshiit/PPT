@@ -1,0 +1,271 @@
+\documentclass[blue]{beamer}
+\usepackage{beamerthemeFrankfurt} 
+\usecolortheme{rose}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{cite} % never use with beamer 
+\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage[most]{tcolorbox}
+\usepackage{adjustbox}
+\makeatletter
+\newcommand{\removelatexerror}{\let\@latex@error\@gobble}
+\makeatother
+\usepackage{url}
+\newtheorem{assumption}{Assumption}
+\usepackage{setspace}
+\setbeamertemplate{itemize/enumerate body begin}{\small}
+\usepackage{tabulary}
+\usepackage[algo2e,linesnumbered,ruled,vlined]{algorithm2e} 
+\makeatletter
+\let\@@magyar@captionfix\relax
+\makeatother
+%\usepackage{algpseudocode,algorithm,algorithmicx}
+\setbeamercolor{title}{fg=red!80!black,bg=red!20!white}
+
+\usefonttheme{professionalfonts} % font theme
+\newtheorem{answeredquestions}[theorem]{Answered Questions}
+\usepackage[figuresright]{rotating}
+\usepackage{subfig}
+\graphicspath{{images/}{use/}{infersent/}}
+%\usefonttheme[onlysmall]{structurebold} %%%small fonts in the navigation bars are a bit hard
+
+\title{Research Presentation}
+\author[Chandresh]{Chandresh Kumar Maurya \\ Research Assistant Professor\\ }
+\institute{E\"otv\"os Lor\'and University, Budapest, Hungary}
+\begin{document}
+\maketitle
+% without [fragile], any {verbatim} code gets mysterious errors.
+
+\begin{frame}{About Me}
+
+{\bf March 2019-}: Research assisstant professor at ELTE University, Budapest Hungary.\\
+{\bf 2017-2019}:  Research Scientist at IBM Research at Bangalore\\
+{\bf 2013-2016}:  Ph.D. student in Computer Science at IIT Roorkee, India. \\
+{\bf 2010-2012}: M.Tech at JNU New Delhi, India\\
+{\bf 2006-2010}: B.Tech at BIET Jhansi, India\\
+\end{frame}
+
+\begin{frame}
+\frametitle{Outline}
+  \tableofcontents %[pausesections]
+\end{frame}
+
+
+\section{Research Contribution}
+
+\begin{frame}
+\frametitle{Research Contribution}
+My research area primarily has been in data mining and machine learning during Ph.D.  In the last two years, I have been working in the NLP, IR and IE domain. 
+So far, I have worked on the following problems:
+\begin{itemize}
+\item Anomaly Detection in Big Data (Ph.D. Topic) ({\bf ML, DM, Convex optimization})
+\item Creative Tagline Generation for Product Advertisement (under IBM"s CFP entitled "Creative AI") ({\bf ML, DM, NLP, IE})
+\item Prediction of Invoice Payment Status in Account Payable Business Process. (Client project) ({\bf ML })
+\item Similarity Learning with Feedback for Invoice Line Item Matching (Client Project) ({\bf  ML, NLP})
+\item  Automatic extraction of change configuration requests from email tickets (Current work with T-labs and TU Berlin) ({\bf NLP via DL, IE})
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}
+\footnotesize
+\frametitle{Publications (Journals)}
+
+\begin{enumerate} 
+\item 
+
+C. Maurya; D. Toshniwal; G. Venkoparao, ``Distributed Sparse Class-Imbalance Learning and its Applications," in {\bf IEEE Transactions on Big Data} , vol.PP, no.99, pp.1-1
+https://doi.org/10.1109/TBDATA.2017.2688372
+
+\item
+Chandresh Kumar Maurya, Durga Toshniwal, Gopalan Vijendran Venkoparao, Online sparse class imbalance learning on big data, {\bf Neurocomputing}, Volume 216, 5 December 2016, Pages 250-260, ISSN 0925-2312, http://doi.org/10.1016/j.neucom.2016.07.040. (IF 3.317)
+
+\item 
+Chandresh Kumar Maurya, Durga Toshniwal, Large-Scale Distributed Sparse Class-Imbalance Learning with Application to Anomaly Detection,  {\bf Information Sciences}, Volume 456, 4 May 2018, Pages 1-12, ISSN 0020-0255, Elsevier, https://doi.org/10.1016/j.ins.2018.05.004 (IF 4.832)
+
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\begin{enumerate} 
+
+
+\item   Creative Tagline Generation Framework for Product Advertisement, Chandresh Kumar Maurya et al.,  in {\bf IBM Journal of Research \& Development}) (SCIE IF 0.6)
+\item  Online Similarity Learning with Feedback for Invoice Line Item Matching (submitted to IEEE TKDE, short version accepted in {\bf AAAI 2020} workshop on intelligent process mining, NY, USA)
+\item DeLAEE: A Deep Learning Architecture for Automated Essay Evaluation (under review in Neural Netowrks and Learning Systems,Springer)
+\item Gmean optimization using PSO for Multi-Class Imbalance learning (under review in Applied Soft Computing)
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Publications (Conferences/Workshops)}
+
+\begin{enumerate} 
+\item 
+Prediction of Invoice Payment Status in Account Payable Business Process. Tarun Tater, Sampath Dechu, Senthil Mani, and Chandresh Kumar Maurya, {\bf International Conference on Service-Oriented Computing (ICSOC)} 2018, China.
+
+\item
+ Anomaly Detection via Distributed Sparse Class-Imbalance Learning. Chandresh Kumar Maurya, Durga Toshniwal, and  Vishal Agarwal, ( presented in \textcolor{red}{International Conference on Machine Learning, ICML 2016} workshop on Anomaly detection, NY, USA)
+
+
+\item
+Online Anomaly Detection via Class-Imbalance Learning, Chandresh Kumar Maurya and Durga Toshniwal,  in  {\bf International Conference on Contemporary Computing (IC3)} , organised jointly by JIIT Noida and University of Florida, USA, Sep 2015.
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Publications (Conferences/Workshops)}
+
+\begin{enumerate} 
+
+
+\item
+ Anomaly Detection in Nuclear Power Plant Data using Support Vector Data Description, Chandresh Kumar Maurya and Durga Toshniwal, in  IEEE TechSym at IIT Kharagpur, Feb 2014.
+
+\item  Fuzzy Inference System for Internet Traffic Load Forecasting, Chandresh Kumar Maurya and Sonajharia Minz. In the Proceedings of National Conference of Computing \& Communications (NCCCS)-
+2012. DOI:10.1109/NCCCS.2012.6413010. .
+
+\item
+Anomaly Detection in Streaming Data using Online Non-negative Matrix Factorization, Chandresh Kumar Maurya, Arun Chauhan and Durga Toshniwal, poster presentation at International workshop on machine learning \& Text analytic(MLTA 2013), South Asian University, New Delhi.  (\textcolor{red}{Best  presentation Award})
+\end{enumerate}
+\end{frame}
+
+
+
+
+\begin{frame}[shrink=20]
+\footnotesize
+\frametitle{Patents While @IBM}
+
+\begin{enumerate} 
+\item A System and Method for Automatic Adjustment of Brightness of Mobile Devices based on Visual Sight ({\bf  FILED})
+
+\item A System and Method for Recommending Popular Features for a Product based on Crowd-source Reviews of the Product and Competitor Product  ({\bf Rated search-2 by IBM, under search}) 
+
+
+\item A System and Method for Finding Best Accommodation using Deep Asthetic Features in Multimodal Data from Social Networks. ({\bf Defensive publication})
+
+\item A System and Method for Automatic  Compliance Checking in Clinical Process using Deep Multi-task Learning. ({\bf  Defensive publication})
+
+\item A system and Method for Similarity Learning with Heterogeneous Catalogues and Taxonomies for Invoice and PO Line Item Matching (under review).
+\item  An Intelligent and Proactive Reminder System using Multi-Modal Data through AI (under review).
+
+\item 
+A System and Method for Consistency Verification of Product’s Information on E-commerce Portals (under review).
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{Projects}
+
+\begin{itemize}
+\item {\bf Evaluation of Effectiveness of Gerson Therapy for Cancer} (In collaboration with IIT Patna India and NTU Singapore, submitted for funding)
+
+\item  {\bf Intelligent reminder system based on multi-model data} (Independent research)
+\item  {\bf Multimodal incident similarity inference for improving ticket resolution}
+(In collaboration with IBM Research and IIIT Gwalior, India)
+\item {\bf  Feature/Suggestion recommendation based on crowd-source data}
+(In collaboration with NIT Shilong, India, IBM Research and NTNU Norway)
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Extra-curricular}
+
+\begin{tcolorbox}
+\textsc{Project-guidance}
+\end{tcolorbox}
+
+\begin{itemize}
+\item Currently, guiding one B.Tech student  at IIIT Gwalior (In collaboration with IBM Research)
+\item Guiding 2 B.Tech students at NIT Shilong  (In collaboration with  IBM Research and NTNU Norway)
+\item  Guided one  IDD students at IIIT-M Gwalior India for  dissertation 
+\item Guided two M.Sc. students for their curriculum's projects at Eotvos Lorand University, Budapest, Hungary. 
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Extra-curricular}
+
+\begin{tcolorbox}
+\textsc{Invited Talks}
+\end{tcolorbox}
+\begin{itemize}
+\item Invited talk at machine learning workshop at NIT Shilong, India Nov 1, 2018.
+\item Invited as a resource person  for faculty development program at Visvesvaraya Technological University, Belgaon, India betwen dec 10-14, 2018.
+\item Invited talk at Jawaharlal Nehru University, New Delhi, between Nov 7-9, 2016.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\begin{tcolorbox}
+\textsc{Scholorships/Awards}
+\end{tcolorbox}
+
+\begin{itemize}
+\item Prime Minister Fellowship for Doctoral Research, awarded by Confederation of Indian Industry(CII, part of DST, Govt. of India New Delhi) and Robert Bosch Engineering \& Business Solution Ltd.(RBEI), Bangalore.
+\item Awarded Topper's scholorship in the $1^{st}$  year of Undergradute.
+\item Junior Research Fellowship by IIT Roorkee, INDIA.
+\item Junior Research Fellowship by University Grant Commission, INDIA.
+\end{itemize}
+
+\end{frame}
+
+
+
+
+\section{Future Research Plan}
+
+\begin{frame}{Future research plans}
+ My future research plans include the following:
+ \begin{enumerate}
+     \item External knowledge injestion in deep architectures
+     \item Class-imbalance learning in multi-modal streaming data
+     \item AI for social good
+ \end{enumerate}
+\end{frame}
+
+%====================================================
+
+
+
+%\section{Teaching plan}
+%
+%\begin{frame}{Teaching plan}
+%Some of the basic and advanced subjects I would like to teach are:
+%\begin{itemize}
+%\item Design and analysis of algorithms
+%\item Data Structures
+%\item Linear algebra
+%\item Probability \& Statistics
+%\item Matrix Calculus
+%
+%\end{itemize}
+%Advanced courses
+%\begin{itemize}
+%\item Machine Learning/Data Science
+%\item Reinforcement learning
+%\item Convex/non-convex optimization
+%\item General AI
+%\item NLP
+%\item IR
+%
+%\end{itemize}
+%
+%\end{frame}
+
+
+
+\begin{frame}[allowframebreaks]{Bibliography}
+\fontsize{8pt}{7.2}\selectfont
+\bibliographystyle{apalike}
+\bibliography{./TKDE}
+\end{frame}
+\end{document}
